@@ -31,7 +31,10 @@ public interface BoardMapper {
  // BoardMapper.java
     public int fileInsert(FileVO file) throws Exception;
      
-     
+  //파일 상세
+    public FileVO fileDetail(int bno) throws Exception;
+
+
   
 
 

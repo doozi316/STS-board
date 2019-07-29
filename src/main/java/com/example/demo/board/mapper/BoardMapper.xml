@@ -55,6 +55,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
        FILES (FNO, BNO, FILENAME, FILEORINAME, FILEURL)
     VALUES (#{fno},#{bno},#{fileName},#{fileOriName},#{fileUrl})
 </insert>
+<select id="fileDetail" parameterType="int" resultType="com.example.demo.board.domain.FileVO">
+    SELECT
+        *
+    FROM Files
+    WHERE
+        BNO = #{bno}
+</select>
+
 
 
 </mapper>
