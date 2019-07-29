@@ -25,11 +25,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             BNO = #{bno}
     </select>
     
-    <insert id="boardInsert" parameterType="com.example.demo.board.domain.BoardVO">
-        INSERT INTO
-        BOARD (BNO, SUBJECT,CONTENT,WRITER,REG_DATE)
-        VALUES(#{bno},#{subject},#{content},#{writer},now()) 
-    </insert>
+    <insert id="boardInsert" parameterType="com.example.demo.board.domain.BoardVO" useGeneratedKeys="true" keyProperty="bno">
+    INSERT INTO
+    BOARD (BNO, SUBJECT,CONTENT,WRITER,REG_DATE)
+    VALUES(#{bno},#{subject},#{content},#{writer},now()) 
+</insert>
+
+
     
     <update id="boardUpdate" parameterType="com.example.demo.board.domain.BoardVO">
         UPDATE BOARD
@@ -47,6 +49,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <delete id="boardDelete" parameterType="int">
         DELETE FROM BOARD WHERE BNO = #{bno}
     </delete>
+    
+    <insert id="fileInsert" parameterType="com.example.demo.board.domain.FileVO">
+       INSERT INTO
+       FILES (FNO, BNO, FILENAME, FILEORINAME, FILEURL)
+    VALUES (#{fno},#{bno},#{fileName},#{fileOriName},#{fileUrl})
+</insert>
+
+
 </mapper>
  
 
