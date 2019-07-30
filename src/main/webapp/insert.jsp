@@ -3,13 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<%@ include file="menu.jsp" %>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 
 
-<h2> 게시글 작성 </h2>
+<h2 align ="center"> 게시글 작성 </h2>
  
 <div class="container">
     <form action="/insertProc" method="post" enctype="multipart/form-data"> <!-- 추가 -->
