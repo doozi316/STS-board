@@ -29,6 +29,7 @@
       <input type="file" name="files"> <!-- 추가 -->
       
       <button type="submit" class="btn btn-primary">작성</button>
+      <button class="btn btn-primary" onclick="location.href='/list'">목록</button>
     </form>
 </div> 
 

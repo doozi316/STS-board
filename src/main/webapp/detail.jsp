@@ -10,10 +10,9 @@
 </head>
 <body>
  
-<h2> 게시글 상세 </h2>
+<h2 align="center"> 게시글 상세 </h2>
  
-<button class="btn btn-primary" onclick="location.href='/update/${detail.bno}'">수정</button> <!-- 추가 -->
-<button class="btn btn-danger" onclick="location.href='/delete/${detail.bno}'">삭제</button>  <!-- 추가 -->
+
  
 <div class="container">
     <form action="/insertProc" method="post">
@@ -37,12 +36,15 @@
         <label>내용</label>
         <p>${detail.content}</p>
       </div>
-      <button type="submit" class="btn btn-primary">작성</button>
+      
     </form>
 </div>
  
-
-
+<center>
+<button class="btn btn-primary" onclick="location.href='/list'">목록</button>
+<button class="btn btn-primary" onclick="location.href='/update/${detail.bno}'">수정</button> <!-- 추가 -->
+<button class="btn btn-danger" onclick="location.href='/delete/${detail.bno}'">삭제</button>  <!-- 추가 -->
+</center>
  
 
 
